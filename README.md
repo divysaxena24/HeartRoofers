@@ -25,8 +25,8 @@ Experience HeartRoofers live: [https://heartroofers.onrender.com/](https://heart
 To run HeartRoofers locally:
 
 1. **Clone the repository:** <br>
-  git clone https://github.com/yourusername/heartroofers.git <br>
-  cd heartroofers
+  git clone https:https://github.com/divysaxena24/HeartRoofers.git <br>
+  cd HeartRoofers
 
 2. **Install dependencies:** <br>
      npm install
