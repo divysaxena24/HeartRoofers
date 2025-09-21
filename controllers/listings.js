@@ -12,7 +12,7 @@ const Review = require("../models/review.js");
 
 
 module.exports.index = async (req, res) => {
-   const allListing = await Listing.find({});
+   const allListing = await Listing.find({}).populate('owner');
    res.render('listings/index', {allListing});
 };
 

@@ -30,6 +30,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title"><%= listing.title %></h5>
                             <p class="card-text"><%= listing.location %></p>
+                            <p class="card-text text-muted">By <%= listing.owner ? listing.owner.username : 'Divya Saxena' %></p>
                             <p class="card-text fw-bold">
                                 ₹<%= listing.price ? listing.price.toLocaleString("en-in") : 'N/A' %>
                             </p>
