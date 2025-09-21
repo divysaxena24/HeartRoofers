@@ -24,25 +24,25 @@ Experience HeartRoofers live: [https://heartroofers.onrender.com/](https://heart
 
 To run HeartRoofers locally:
 
-1. **Clone the repository:**
-  git clone https://github.com/yourusername/heartroofers.git
+1. **Clone the repository:** <br>
+  git clone https://github.com/yourusername/heartroofers.git <br>
   cd heartroofers
 
-2. **Install dependencies:**
+2. **Install dependencies:** <br>
      npm install
 
-3. **Configure environment variables:**
-  Create a `.env` file in the root directory and add:
-  PORT=8080
-  MONGO_URI=your_mongodb_connection_string
-  JWT_SECRET=your_secret_key
+3. **Configure environment variables:** <br>
+  Create a `.env` file in the root directory and add:<br> 
+  PORT=8080 <br>
+  MONGO_URI=your_mongodb_connection_string <br>
+  JWT_SECRET=your_secret_key <br>
 
 
-4. **Start the development server:**
-   node app.js
+4. **Start the development server:** <br>
+   node app.js 
 
 
-5. Visit [http://localhost:3000](http://localhost:8080) to see the app in action.  
+5. Visit [http://localhost:3000](http://localhost:8080) to see the app in action. <br>  
 
 ## 🤝 Contributing
 
@@ -50,15 +50,15 @@ We welcome contributions to improve HeartRoofers. To contribute:
 
 1. **Fork the repository.**
 
-2. **Create a new branch:**
+2. **Create a new branch:** <br>
    git checkout -b feature/YourFeature
 
 
-3. **Make your changes and commit them:**
+3. **Make your changes and commit them:** <br>
    git commit -m "Add new feature"
 
 
-4. **Push to your branch:**
+4. **Push to your branch:** <br>
     git push origin feature/YourFeature
 
 
