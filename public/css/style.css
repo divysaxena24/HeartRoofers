@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #6b7280;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --light-color: #f9fafb;
+    --dark-color: #111827;
+    --body-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-color: #374151;
+    --border-color: #e5e7eb;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --border-radius: 0.75rem;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 70px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--card-bg) !important;
+    box-shadow: var(--box-shadow);
+    padding-top: 0.2rem;   /* reduce default padding */
+    padding-bottom: 0.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+}
+
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary-color) !important;
+}
+
+.navbar-brand img {
+  height: 60px;   /* adjust to your liking */
+  width: auto;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0.8rem 1.2rem;
+    color: var(--dark-color) !important;
+    transition: color 0.3s ease;
+}
+
+
+.navbar .btn {
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0.75rem;
+  font-size: 01rem;
+}
+
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.1rem; /* Adjust to align with other links */
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: var(--light-color);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: var(--dark-color);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-img-top {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+}
+
+.card-text {
+    color: var(--secondary-color);
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    outline: none;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--card-bg);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.f-info-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.f-info-links a:hover {
+    color: var(--primary-color);
+}
+
+.f-info-socials i {
+    font-size: 1.5rem;
+    margin: 0 0.75rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.f-info-socials i:hover {
+    color: var(--primary-color);
+}
+
+/* Listing Details */
+.show-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Stronger shadow */
+    padding: 2.5rem; /* Slightly more padding */
+}
+
+.show-img {
+    border-radius: var(--border-radius);
+    max-width: 100%;
+    height: 400px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers the area */
+    margin-bottom: 1.5rem; /* Space below image */
+}
+
+/* Reviews */
+.review-card {
+    background-color: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Subtle shadow */
+}
+
+.listing-card-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.show-card .list-group-item {
+    background-color: transparent; /* Ensure it blends with card background */
+    border-color: var(--border-color); /* Use project's border color */
+    padding: 0.75rem 0; /* Adjust padding */
+}
+
+.show-card .list-group-item:last-child {
+    border-bottom: none; /* Remove bottom border for the last item */
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.feature-icon i {
+    color: var(--primary-color);
+}

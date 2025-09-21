@@ -1,0 +1,61 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="container-fluid px-0">
+    <!-- Hero Section -->
+    <div class="hero-section text-center text-white d-flex justify-content-center align-items-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Find Your Next Home with HeartRoofers</h1>
+            <p class="lead">The easiest way to find your perfect rental property.</p>
+            <a href="/listings" class="btn btn-primary btn-lg mt-3">Explore Listings</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-search fa-3x"></i>
+                </div>
+                <h3>Advanced Search</h3>
+                <p>Find the perfect property with our powerful and easy-to-use search filters.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-check-circle fa-3x"></i>
+                </div>
+                <h3>Verified Listings</h3>
+                <p>All our listings are verified to ensure a safe and trustworthy experience.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-comments fa-3x"></i>
+                </div>
+                <h3>Direct Communication</h3>
+                <p>Communicate directly with property owners to get all your questions answered.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container text-center">
+            <h2>Ready to find your new home?</h2>
+            <p class="lead">Browse our listings or sign up to get started.</p>
+            <a href="/listings" class="btn btn-primary btn-lg">Explore Listings</a>
+            <a href="/register" class="btn btn-secondary btn-lg ms-2">Sign Up</a>
+        </div>
+</div>
+
+<style>
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+    }
+
+    .feature-icon i {
+        color: var(--primary-color);
+    }
+</style>
