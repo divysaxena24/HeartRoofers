@@ -88,7 +88,7 @@
                         <% } %>
                     </ul>
 
-                    <% if (currentUser && currentUser._id.toString() === listing.owner._id.toString()) { %>
+                    <% if (currentUser && listing.owner && currentUser._id.equals(listing.owner._id)) { %>
                         <div class="d-flex gap-2 mt-3">
                             <a href="/listings/<%= listing._id %>/edit" class="btn btn-warning">Edit Details</a>
                             <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" onsubmit="return confirm('Are you sure?');">
