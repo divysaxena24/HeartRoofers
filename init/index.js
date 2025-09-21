@@ -1,28 +1,31 @@
-const mongoose = require("mongoose");
-const Listing = require("../models/listing"); 
-const listings = require("./data");
+// insertListings.js
+require('dotenv').config({ path: '../.env' });
+const { MongoClient } = require("mongodb");
+const sampleListings = require("./data"); // your data file
 
-main()
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.error("Connection error", err);
-  });
+// Replace with your Atlas connection string
+const uri = process.env.ATLASDB_URL;
 
-async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/heartroofers");
-  await Listing.deleteMany({});
+async function insertData() {
+  const client = new MongoClient(uri);
 
-  
-  const updatedListings = listings.map((obj) => ({
-    ...obj,
-    owner: "68ba69ef13ef2f5bea35e770",
-  }));
+  try {
+    await client.connect();
+    const database = client.db(); // Use the default DB from the connection string
+    const collection = database.collection("listings");
 
-  await Listing.insertMany(updatedListings);
-  console.log("Data seeded successfully!");
+    // Optional: Clear existing data before inserting new data
+    await collection.deleteMany({});
+    console.log("Cleared existing listings.");
+
+    // Insert all listings at once
+    const result = await collection.insertMany(sampleListings);
+    console.log(`${result.insertedCount} listings inserted successfully!`);
+  } catch (error) {
+    console.error("Error inserting data:", error);
+  } finally {
+    await client.close();
+  }
 }
 
-module.exports = { main }; 
-
+insertData();

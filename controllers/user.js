@@ -15,10 +15,9 @@ module.exports.postRegsiter = async(req, res, next) => {
                 if(err){
                     return next(err);
                 }
+                req.flash("success", "Welcome to HeartRoofers!");
+                res.redirect("/listings");
             });
-
-            req.flash("success", "Welcome to HeartRoofers!");
-            res.redirect("/listings");
         } catch(e){
             req.flash("error", e.message);
             res.redirect("/register");

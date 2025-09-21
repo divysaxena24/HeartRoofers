@@ -3,7 +3,7 @@ console.log(process.env.SECRET);
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const mongo_uri = "mongodb://127.0.0.1:27017/heartroofers"; // Update with your MongoDB URI
+const dbUrl = process.env.ATLASDB_URL; // Update with your MongoDB URI
 const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
 const path = require('path');
@@ -12,6 +12,7 @@ const indexRouter = require("./routes/index.js");
 const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const sessions = require("express-session");
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const passport = require("passport");
 const User = require("./models/user.js");
@@ -29,7 +30,7 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(mongo_uri)
+    await mongoose.connect(dbUrl)
 }
 
 //setup view engine
@@ -40,7 +41,20 @@ app.use(express.urlencoded({ extended: true })); // this is done so that data ca
 app.use(methodOverride('_method')); // this is done so that we can use PUT and DELETE methods in forms
 app.use(express.static(path.join(__dirname, 'public'))); // this is done so that we can use static files like css, js, images, etc. and public is the folder where we will keep our static files
 
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    crypto: {
+        secret: process.env.SECRET,
+    },
+    touchAfter: 24 * 3600 // time period in seconds
+});
+
+store.on("error", (err) => {
+    console.log("Session store error", err);
+});
+
 const sessionOptions = {
+    store,
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
@@ -51,6 +65,7 @@ const sessionOptions = {
     }
     // this will create a session cookie that will expire in 10 days
 }
+
 
 app.use(sessions(sessionOptions));
 app.use(flash()); // this is done so that we can use flash messages in our app  
