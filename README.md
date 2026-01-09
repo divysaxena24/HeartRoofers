@@ -44,6 +44,20 @@ To run HeartRoofers locally:
 
 5. Visit [http://localhost:3000](http://localhost:8080) to see the app in action. <br>  
 
+## Video Walkthrough
+
+
+https://github.com/user-attachments/assets/2f927db1-6298-4ef3-a9c8-66592e8da7f5
+
+
+## ScreenShots
+
+<img width="1901" height="978" alt="Screenshot 2026-01-09 223414" src="https://github.com/user-attachments/assets/72a939ed-5340-46cc-b1fc-03e66bfa9329" />
+<img width="1910" height="927" alt="Screenshot 2026-01-09 223347" src="https://github.com/user-attachments/assets/39b61f24-7031-493f-b26b-b829bc56dd2b" />
+<img width="1894" height="902" alt="Screenshot 2026-01-09 223330" src="https://github.com/user-attachments/assets/d2768242-6055-4d8c-8e55-909e111081ee" />
+
+
+
 ## 🤝 Contributing
 
 We welcome contributions to improve HeartRoofers. To contribute:
