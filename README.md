@@ -19,6 +19,45 @@ Experience HeartRoofers live: [https://heartroofers.onrender.com/](https://heart
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
 - **Hosting:** Render.com
+- **Cloud Storage:** Cloudinary (for images)
+
+## 🏗️ Project Architecture
+
+### System Architecture
+```mermaid
+graph TD
+    Client[Browser: EJS, CSS, JS]
+    Server[Express/Node.js Server]
+    Auth[Passport.js Auth]
+    DB[(MongoDB Atlas)]
+    Cloud[Cloudinary Storage]
+    Valid[Joi Validation]
+
+    Client <--> Server
+    Server <--> Auth
+    Server <--> DB
+    Server <--> Cloud
+    Server --> Valid
+```
+
+### User Flow
+```mermaid
+graph LR
+    H[Home Page] --> S[Signup/Login]
+    H --> E[Explore Listings]
+    S --> H
+    E --> D[Listing Details]
+    D --> R[Add/Delete Review]
+    D --> OW[Owner: Edit/Delete Listing]
+    H --> NL[List New Property]
+```
+
+## ✨ Recent Technical Improvements
+I've recently enhanced the platform with premium UI/UX features and robust security:
+- **Premium Confirmation UI**: Replaced native browser alerts with a custom, glassmorphism-styled confirmation modal for all critical actions (Logout, Deletion).
+- **Modern Notification System**: Overhauled the alert system with smooth animations, contextual icons, and glassmorphism effects.
+- **Robust Phone Validation**: Implemented strict 10-digit phone number validation on both frontend and backend (Joi regex).
+- **Streamlined Onboarding**: Added auto-login functionality after successful signup and context-aware CTA buttons on the home page.
 
 ## 📦 Installation
 
