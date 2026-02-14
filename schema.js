@@ -7,9 +7,11 @@ module.exports.listingSchema = Joi.object({
   location: Joi.string(),
   price: Joi.string(),
   contact: Joi.object({
-    phone: Joi.string(),
-    email: Joi.string(),
-  }),
+    phone: Joi.string().regex(/^[0-9]{10}$/).required().messages({
+      'string.pattern.base': 'Phone number must be exactly 10 digits.',
+    }),
+    email: Joi.string().required(),
+  }).required(),
   facilities: Joi.array().items(Joi.string()),
   roomSharingType: Joi.string(),
   genderPreference: Joi.string(),

@@ -12,8 +12,9 @@
                         <div class="invalid-feedback">Title is required.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="image" class="form-label">Upload Image</label>
-                        <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                        <label for="image" class="form-label">Upload Image *</label>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                        <div class="invalid-feedback">Property image is required.</div>
                         <div id="image-error" class="text-danger" style="display:none;">File must be less than 10 MB.</div>
                     </div>
                     <div class="row">
@@ -35,8 +36,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Contact Phone *</label>
-                        <input type="tel" class="form-control" id="phone" name="contact[phone]" placeholder="Enter contact phone" required>
-                        <div class="invalid-feedback">Contact phone is required.</div>
+                        <input type="tel" class="form-control" id="phone" name="contact[phone]" placeholder="Enter 10-digit contact phone" pattern="\d{10}" minlength="10" maxlength="10" required>
+                        <div class="invalid-feedback">A valid 10-digit phone number is required.</div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">

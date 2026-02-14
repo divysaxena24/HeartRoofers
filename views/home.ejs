@@ -43,7 +43,9 @@
             <h2>Ready to find your new home?</h2>
             <p class="lead">Browse our listings or sign up to get started.</p>
             <a href="/listings" class="btn btn-primary btn-lg">Explore Listings</a>
-            <a href="/register" class="btn btn-secondary btn-lg ms-2">Sign Up</a>
+            <% if (!currentUser) { %>
+                <a href="/register" class="btn btn-secondary btn-lg ms-2">Sign Up</a>
+            <% } %>
         </div>
 </div>
 

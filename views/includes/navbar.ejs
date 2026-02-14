@@ -39,7 +39,9 @@
         </li>
         <% } %> <% if(currentUser){ %>
         <li class="nav-item">
-          <a href="/logout" class="btn btn-danger">LogOut</a>
+          <form action="/logout" method="GET" class="confirm-action" data-message="Are you sure you want to log out?" data-btn-text="LogOut" data-btn-class="btn-danger">
+            <button type="submit" class="btn btn-danger nav-logout-btn">LogOut</button>
+          </form>
         </li>
         <% } %>
       </ul>

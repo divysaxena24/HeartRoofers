@@ -17,8 +17,14 @@ module.exports.index = async (req, res) => {
 };
 
 module.exports.postCreateRoute = async (req, res, next) => {
-    let url = req.file.path;
-    let filename = req.file.filename; 
+    let url = "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop";
+    let filename = "listingimage";
+    
+    if(typeof req.file != "undefined"){
+        url = req.file.path;
+        filename = req.file.filename; 
+    }
+    
     const newListing = new Listing(req.body); // because req.body contains the data from the form
 
     newListing.owner = req.user.id;

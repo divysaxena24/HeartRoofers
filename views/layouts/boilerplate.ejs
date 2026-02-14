@@ -26,9 +26,14 @@
   <body>
     <%- include("../includes/navbar.ejs") %>
     <div class="page-container">
+      <div class="container mt-3">
+        <%- include("../includes/flash.ejs") %>
+      </div>
       <main class="main-content container-fluid"><%- body %></main>
       <%- include("../includes/footer.ejs") %>
     </div>
+    
+    <%- include("../includes/confirmation_modal.ejs") %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
