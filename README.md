@@ -2,18 +2,18 @@
 
 HeartRoofers is a user-friendly web application that simplifies the process of finding and listing rental properties. Whether you're a tenant looking for a new home or a property owner wanting to reach potential tenants, HeartRoofers provides a seamless platform to connect both parties.
 
-## 🚀 Features
+## Features
 
 - **Advanced Searching** – Quickly find properties based on location, price and state .
 - **Verified Listings** – All listings are verified to ensure authenticity and reliability.
 - **Direct Communication** – Contact property owners directly through the platform.
 - **Responsive Design** – Fully responsive interface for smooth experience on desktop and mobile devices.
 
-## 🌐 Live Demo
+## Live Demo
 
 Experience HeartRoofers live: [https://heartroofers.onrender.com/](https://heartroofers.onrender.com/)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** Node.js, Express.js
@@ -21,7 +21,7 @@ Experience HeartRoofers live: [https://heartroofers.onrender.com/](https://heart
 - **Hosting:** Render.com
 - **Cloud Storage:** Cloudinary (for images)
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ### System Architecture
 ```mermaid
@@ -52,14 +52,14 @@ graph LR
     H --> NL[List New Property]
 ```
 
-## ✨ Recent Technical Improvements
+## Recent Technical Improvements
 I've recently enhanced the platform with premium UI/UX features and robust security:
 - **Premium Confirmation UI**: Replaced native browser alerts with a custom, glassmorphism-styled confirmation modal for all critical actions (Logout, Deletion).
 - **Modern Notification System**: Overhauled the alert system with smooth animations, contextual icons, and glassmorphism effects.
 - **Robust Phone Validation**: Implemented strict 10-digit phone number validation on both frontend and backend (Joi regex).
 - **Streamlined Onboarding**: Added auto-login functionality after successful signup and context-aware CTA buttons on the home page.
 
-## 📦 Installation
+## Installation
 
 To run HeartRoofers locally:
 
@@ -97,7 +97,7 @@ https://github.com/user-attachments/assets/2f927db1-6298-4ef3-a9c8-66592e8da7f5
 
 
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to improve HeartRoofers. To contribute:
 
